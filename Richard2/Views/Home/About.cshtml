@@ -1,7 +1,81 @@
 ﻿@{
-    ViewData["Title"] = "About";
+    Layout = "~/Views/Home/MasterDetailsLayoutPage.cshtml";
 }
-<h2>@ViewData["Title"]</h2>
-<h3>@ViewData["Message"]</h3>
 
-<p>Use this area to provide additional information.</p>
+
+@section head{
+
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+
+            /* Initialize master table - optionally */         
+
+            var oCompaniesTable = $('#companies').DataTable({
+                "sScrollY": "100px",
+                "bJQueryUI": true,                
+                "sAjaxSource": "SomeActionMethod",
+                "bProcessing": true
+            });
+
+            /* Add a click handler to the rows - this could be used as a callback */
+            $("#companies tbody").click(function (event) {
+                $(oCompaniesTable.fnSettings().aoData).each(function () {
+                    $(this.nTr).removeClass('row_selected');
+                });
+                $(event.target.parentNode).addClass('row_selected');
+            });
+
+            var MasterRecordID = null;
+
+            //Get Employess data
+            var oEmployeesTable = $('#employees').dataTable({
+                "sScrollY": "100px",
+                "bJQueryUI": true,
+                "bServerSide": true,
+                "sAjaxSource": "MasterDetailsAjaxHandler",
+                "bProcessing": true,
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    aoData.push({ "name": "CompanyID", "value": MasterRecordID });
+                    $.getJSON(sSource, aoData, function (json) {
+                        fnCallback(json)
+                    });
+                }
+            });
+
+           //Get Rest_id clicking on tr
+            $('#companies tbody').on('click', 'tr', function () {
+                var data = oCompaniesTable.row(this).data();                
+                MasterRecordID = parseInt(data[0]);               
+                oEmployeesTable.fnDraw();
+            });
+        });
+    </script>
+}
+
+    <div id="demo">
+        <table id="companies" class="display">
+            <thead>
+                <tr>
+                    <th>Company ID</th>
+                    <th>Company name</th>
+                    <th>Address</th>
+                    <th>Town</th>
+                </tr>
+            </thead>
+
+            <tbody> </tbody>         
+           
+        </table> 
+        
+        <table id="employees" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Employee</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>

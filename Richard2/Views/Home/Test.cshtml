@@ -1,0 +1,101 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+    Layout = "~/Views/Home/MasterDetailsLayoutPage.cshtml";
+}
+
+@section head{
+
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+
+            /* Initialize master table - optionally */
+            var oCompaniesTable = $('#companies').dataTable({ "bJQueryUI": true });
+            /* Add a click handler to the rows - this could be used as a callback */
+            $("#companies tbody").click(function (event) {
+                $(oCompaniesTable.fnSettings().aoData).each(function () {
+                    $(this.nTr).removeClass('row_selected');
+                });
+                $(event.target.parentNode).addClass('row_selected');
+            });
+
+            var MasterRecordID = null;
+
+            var oEmployeesTable = $('#employees').dataTable({
+                "sScrollY": "100px",
+                "bJQueryUI": true,
+                "bServerSide": true,
+                "sAjaxSource": "MasterDetailsAjaxHandler",
+                "bProcessing": true,
+                "fnServerData": function (sSource, aoData, fnCallback) {
+                    aoData.push({ "name": "CompanyID", "value": MasterRecordID });
+                    $.getJSON(sSource, aoData, function (json) {
+                        fnCallback(json)
+                    });
+                }
+            });
+
+            $(".masterlink").click(function (e) {
+                MasterRecordID = $(this).attr("rel");
+                oEmployeesTable.fnDraw();
+            });
+        });
+    </script>
+}
+
+<div id="demo">
+    <table id="companies" class="display">
+        <thead>
+            <tr>
+                <th>Company name</th>
+                <th>Address</th>
+                <th>Town</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr rel="0" class="masterlink">
+                <td>Emkay Entertainments</td>
+                <td>Nobel House, Regent Centre</td>
+                <td>Lothian</td>
+            </tr>
+            <tr rel="1" class="masterlink">
+                <td>The Empire</td>
+                <td>Milton Keynes Leisure Plaza</td>
+                <td>Buckinghamshire</td>
+            </tr>
+            <tr rel="2" class="masterlink">
+                <td>Asadul Ltd</td>
+                <td>Hophouse</td>
+                <td>Essex</td>
+            </tr>
+            <tr rel="3" class="masterlink">
+                <td>Ashley Mark Publishing Company</td>
+                <td>1-2 Vance Court</td>
+                <td>Tyne &amp; Wear</td>
+            </tr>
+            <tr rel="4" class="masterlink">
+                <td>MuchMoreMusic Studios</td>
+                <td>Unit 29</td>
+                <td>London</td>
+            </tr>
+            <tr rel="5" class="masterlink">
+                <td>Audio Records Studios</td>
+                <td>Oxford Street</td>
+                <td>London</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="employees" class="display">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Employee</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+

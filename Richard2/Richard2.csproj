@@ -5,8 +5,113 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Content\dataTables\demo_page.css" />
+    <Content Remove="wwwroot\Content\dataTables\demo_table.css" />
+    <Content Remove="wwwroot\Content\dataTables\demo_table_jui.css" />
+    <Content Remove="wwwroot\Content\images\back_disabled.jpg" />
+    <Content Remove="wwwroot\Content\images\back_enabled.jpg" />
+    <Content Remove="wwwroot\Content\images\favicon.ico" />
+    <Content Remove="wwwroot\Content\images\forward_disabled.jpg" />
+    <Content Remove="wwwroot\Content\images\forward_enabled.jpg" />
+    <Content Remove="wwwroot\Content\images\Sorting icons.psd" />
+    <Content Remove="wwwroot\Content\images\sort_asc.png" />
+    <Content Remove="wwwroot\Content\images\sort_asc_disabled.png" />
+    <Content Remove="wwwroot\Content\images\sort_both.png" />
+    <Content Remove="wwwroot\Content\images\sort_desc.png" />
+    <Content Remove="wwwroot\Content\images\sort_desc_disabled.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\base\jquery-ui.css" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Remove="wwwroot\Content\themes\smoothness\jquery-ui-1.7.2.custom.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.2.1" />
+    <PackageReference Include="EntityLite.Core" Version="2.1.1" />
+    <PackageReference Include="jQuery" Version="3.3.1" />
+    <PackageReference Include="jquery.datatables" Version="1.10.15" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\dataTables\demo_page.css" />
+    <None Include="wwwroot\Content\dataTables\demo_table.css" />
+    <None Include="wwwroot\Content\dataTables\demo_table_jui.css" />
+    <None Include="wwwroot\Content\images\back_disabled.jpg" />
+    <None Include="wwwroot\Content\images\back_enabled.jpg" />
+    <None Include="wwwroot\Content\images\favicon.ico" />
+    <None Include="wwwroot\Content\images\forward_disabled.jpg" />
+    <None Include="wwwroot\Content\images\forward_enabled.jpg" />
+    <None Include="wwwroot\Content\images\Sorting icons.psd" />
+    <None Include="wwwroot\Content\images\sort_asc.png" />
+    <None Include="wwwroot\Content\images\sort_asc_disabled.png" />
+    <None Include="wwwroot\Content\images\sort_both.png" />
+    <None Include="wwwroot\Content\images\sort_desc.png" />
+    <None Include="wwwroot\Content\images\sort_desc_disabled.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <None Include="wwwroot\Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <None Include="wwwroot\Content\themes\base\jquery-ui.css" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <None Include="wwwroot\Content\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <None Include="wwwroot\Content\themes\smoothness\jquery-ui-1.7.2.custom.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataLayer.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
   </ItemGroup>
 
 </Project>
