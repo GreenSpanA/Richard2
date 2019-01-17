@@ -20,9 +20,7 @@ namespace Richard2.Models
         public string RestaurantName { get; set; }
         public string MenuType { get; set; }
         public int RestID { get; set; }
-        public string UpdateTime { get; set; }
-
-
+        public string UpdateTime { get; set; }       
 
         public Menus(string line)
         {
@@ -32,16 +30,16 @@ namespace Richard2.Models
             Description = split[1];
             VegComment = split[2];
             Price = Convert.ToDouble(split[3]);          
-            Category = split[4];
-            Comment = split[4];
-            SizeComment = split[5];
-            PriceComment = split[6];
+            Category = split[5];
+            Comment = split[6];
+            SizeComment = split[7];
+            PriceComment = split[8];
 
-            MenuLink = split[9];
-            RestaurantName = split[10];
-            MenuType = split[11];
-            RestID = Convert.ToInt16(split[12]);
-            UpdateTime = split[13];
+            MenuLink = split[10];
+            RestaurantName = split[11];
+            MenuType = split[12];
+            RestID = Convert.ToInt16(split[13]);
+            UpdateTime = split[14];
         }
     }
 }

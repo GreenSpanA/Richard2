@@ -62,15 +62,13 @@ namespace Richard2.Controllers
         }
 
         public ActionResult MasterDetailsAjaxHandler(JQueryDataTableParamModel param, int? CompanyID)
-        {
+        {           
 
-            //var employees = DataRepository.GetEmployees();
-
-            var employees = System.IO.File.ReadAllLines("Models\\Data\\menu_sample.csv")
+            var employees = System.IO.File.ReadAllLines("Models\\Data\\menus.csv")
                                            .Skip(1)
                                            .Select(v => new Menus(v))
                                            .ToList();
-            //"Business logic" methog that filter employees by the employer id
+            //"Business logic" methog that filter menu items by the rest id
             var companyEmployees = (from e in employees
                                     where (CompanyID == 0 || e.RestID == CompanyID) //Change display settings here
                                     select e).ToList();
@@ -80,7 +78,9 @@ namespace Richard2.Controllers
                                      where (param.sSearch == null || e.RestaurantName.ToLower().Contains(param.sSearch.ToLower()))
                                      select e).ToList();
             var result = from emp in filteredEmployees.Skip(param.iDisplayStart).Take(param.iDisplayLength)
-                         select new[] { Convert.ToString(emp.ItemName), emp.Description, Convert.ToString(emp.Price)};
+                         select new[] {emp.ItemName, emp.Description, emp.VegComment, Convert.ToString(emp.Price),
+                         emp.Category, emp.Comment, emp.SizeComment, emp.PriceComment,
+                         emp.MenuLink, emp.MenuType, Convert.ToString(emp.RestID), emp.UpdateTime};
 
             return Json(new
             {
