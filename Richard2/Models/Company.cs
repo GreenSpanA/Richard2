@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 namespace Richard2.Models
 {
     public class Company
-    {
-        //static int nextID = 17;
-
-        //public Company()
-        //{
-        //    ID = nextID++;
-        //}
+    {        
 
         public int ID { get; set; }
         public string Name { get; set; }
@@ -25,16 +19,6 @@ namespace Richard2.Models
             Name = split[1];
             Address = split[2];
             Town = split[3];
-        }
-        //public static Company FromCsv(string csvLine)
-        //{
-        //    string[] values = csvLine.Split(',');
-        //    Company company = new Company();
-        //    company.ID = Convert.ToInt32(values[0]);
-        //    company.Name = values[1];
-        //    company.Address = values[2];
-        //    company.Town = values[3];
-        //    return company;
-        //}
+        }        
     }
 }

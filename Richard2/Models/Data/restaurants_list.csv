@@ -1,0 +1,201 @@
+int_id;rest_id;rest_name;website;lat;lng;neighborhood
+0;4052a183-fe3d-5a78-9725-2a8c27da9216;Adore Remo;http://www.adoreremo.co.uk;51,513588;-0,112245;City
+1;3526c906-e4a9-5288-b5f1-858b5caf866e;Brasserie Blanc;https://brasserieblanc.com/#;51,514589;-0,111359;City
+2;891bd21a-559b-52a7-94aa-13e4a082b960;Cheese & Pepper;http://www.cheeseandpeppers.com/;51,511079;-0,084905;City
+106;33e45166-8563-5170-9074-570f09bd79d9;The Lampery;http://thelampery.com;51,510808;-0,079626;City
+107;ca58a282-c41b-5c19-bd15-0d746ec18324;The Good Yard;http://www.thegoodyard.com;51,517552;-0,082624;City
+109;ad837ce4-bd94-5b55-8bbd-34cd1c790b5b;Lutyens Grill;http://www.thened.com/restaurants/lutyens-grill#;51,514089;-0,090012;City
+114;9401c861-1988-5a9a-a7a1-1abbe140080f;Club Gascon;http://www.clubgascon.com/about.php;51,518829;-0,100215;City
+115;6a8047e1-6cdc-527f-88a9-d8a2bc8ab085;Williamson's Tavern;http://www.nicholsonspubs.co.uk/williamsonstaverngrovelandcourtlondon/;51,513485;-0,093597;City
+3;3815f881-2962-55e7-9c80-53d8ab742bd5;Punch Tavern;http://www.punchtavern.com/;51,514202;-0,10495;City
+4;26cea6a3-3476-5aa8-8847-e7a922c470f8;WM Barker and Co;http://www.wmbarkerandco.uk/;51,518213;-0,079412;City
+7;f72634f1-7d9f-58b5-a3db-6382039511db;Hispania London;http://www.hispanialondon.com/;51,513118;-0,087694;City
+8;2eb3190b-9fc0-5007-b646-e243461b7ce8;The Fine Line - Bow;http://www.finelinebow.co.uk/;51,513676;-0,094059;City
+28;86621c86-bfb8-5207-86b4-dcab5467afb0;Porterford;http://www.porterfordbutchers.co.uk;51,513344;-0,093762;City
+10;f0d0c784-ded3-5d82-9304-bebc7fa44ad5;Haz;http://www.hazrestaurant.co.uk/;51,516013;-0,079001;City
+119;c2cfd46f-d734-519b-8b46-779fbdddba0a;Casella;http://www.casellaristoranti.wixsite.com/london;51,513914;-0,106369;City
+121;775fe84c-ac5a-5c30-abc9-278e1f11a5bf;Nusa Kitchen;http://www.nusakitchen.co.uk/;51,512541;-0,097793;City
+122;22dc06e1-6f5e-5978-b223-02aa9af95e20;Off The Wall;http://www.apexhotels.co.uk/apex-london-wall-hotel/dining;51,516222;-0,088126;City
+11;8ad4f062-dad8-5a6d-a487-e28d13f9ffc8;Gatti's City Point;http://gattisrestaurant.co.uk/;51,519257;-0,089674;City
+12;cda7cf4d-3cb1-5ff4-bb1c-91787f729ec8;Luc's Brasserie;http://www.lucsbrasserie.com/;51,510675;-0,079557;City
+126;21f81489-6a78-57b6-87bb-0a60d0d75a18;Burdock;http://www.burdocklondon.com/;51,522468;-0,085999;City
+130;4e7fea27-1ba9-50d4-b64f-59f42ce43a55;Giorgio at Leadenhall;http://www.giorgioatleadenhall.co.uk/;51,512423;-0,08368;City
+305;cda02490-7afe-5a5a-bdeb-b68d0bb0999a;Zizzi - Tower Hill;https://www.zizzi.co.uk/italian/restaurants/london/tower-hill;51,509553;-0,080111;City
+312;248d18cd-eee0-518b-a64b-1b462292716e;Candb;http://www.corney-barrow.co.uk/bars/locations/city-point/;51,519601;-0,089977;City
+500;3bcdd5f5-a515-5322-abc7-a84835245da6;Pham Sushi;http://www.phamsushi.com/;51,52008;-0,090511;City
+152;dc08ed2d-1a26-5cd1-9d8d-c2fb1bced55f;1 Lombard Street;http://www.1lombardstreet.com;51,513294;-0,088963;City
+621;4355e410-eba5-5b79-bf40-430266cc0f75;21 West;http://www.21west.co.uk;51,518448;-0,101752;City
+478;bb9c5faa-6d30-5460-a589-4b7f56ebe0ec;Anokha Indian Bar Restaurant;http://www.anokha-indian.com;51,5142;-0,079263;City
+74;52d16cde-4084-5a7b-a28a-131129600139;Bodean's BBQ - Tower Hill;http://www.bodeansbbq.com/tower-hill;51,509938;-0,078887;City
+616;3553e9bc-553d-5ec1-9fd9-e669c7a40b6a;Burrito Kitchen;http://www.burritokitchen.com/;51,513667;-0,09179;City
+618;04537bb3-94e6-5e57-978a-7d36ccc3e7d5;The Centre Page;http://www.thecentrepage.co.uk;51,512777;-0,098663;City
+619;c61a10c8-26be-5c0b-97fb-909360621418;Simpson's Tavern;http://www.simpsonstavern.co.uk;51,513365;-0,085995;City
+71;8dc773f8-5158-5cf7-a146-0fde7f9d0fed;Duck and Waffle;http://duckandwaffle.com/;51,516416;-0,080945;City
+622;09f62cc0-0b4d-5a88-b7de-2039cfc276ec;Gaucho - Broadgate;https://www.gauchorestaurants.com/;51,519608;-0,084104;City
+67;683d33bc-8d1d-59b6-b489-8eef1ee0929f;Samuel Pepys;http://www.samuelpepys.pub;51,510653;-0,096216;City
+48;5a5f8c15-a98a-59c7-b0ef-afc470806ea3;The Don Restaurant;http://www.thedonrestaurant.com/;51,512043;-0,089057;City
+422;6413b28a-52a7-5857-a762-1651101aae9b;City Caphe;http://citycaphe.com/;51,514995;-0,091607;City
+418;b6e63ce7-2684-56bb-b6e9-4c58c830a7d4;THREE CRANES;http://threecranescity.co.uk/;51,512291;-0,093724;City
+639;f1865da1-f66f-5f42-92ce-bb9a541f43cc;Le Bar;http://www.lebarlondon.co.uk/;51,518777;-0,100343;City
+642;d80be579-f24f-567f-a55a-b5ab411a0a43;Old Doctor Butler's Head;http://www.shepherdneame.co.uk/pubs/moorgate/old-doctor-butlers-head;51,515931;-0,090339;City
+643;c12c8986-537b-5e45-ac4a-44743467d0fa;Baracca;http://Www.baraccarestaurant.co.uk;51,522066;-0,092363;City
+648;dde427ff-8abf-557a-893d-692773096ca4;Revolution America Square;http://www.revolution-bars.co.uk/bar/london-america-square/;51,511376;-0,076192;City
+651;e194e13b-36f1-5aae-a9d5-69ecd75f3519;St Bart's Brewery;http://www.stbartsbrewery.com/;51,519113;-0,100704;City
+652;1532c3aa-6303-5cd7-a6c6-0e95ab976431;Notes;http://www.notes-uk.co.uk;51,514685;-0,080328;City
+653;9ea37365-47c1-550d-8de6-6888ec1036b3;Inigo Sushi Handrolls;http://www.inigofoods.com;51,515249;-0,086883;City
+655;809e96cd-19d2-5be4-a1e6-78403d6e7f0b;Patch East;http://www.patch-bar.co.uk/east/home;51,513626;-0,078622;City
+660;b6120955-124c-55cb-bd3d-a381fd06fa2c;The Globe;http://www.nicholsonspubs.co.uk/theglobemoorgatelondon/;51,517886;-0,088745;City
+662;2fc321e6-8c12-5fa9-9c89-bee0d1f4f1b7;Polu Poke;http://polupoke.co.uk;51,522118;-0,080026;City
+440;912bb06e-102e-5634-9761-ed0a0c767a59;Kitty Hawk;https://thekittyhawk.co.uk/;51,519122;-0,086945;City
+441;43f7e3c8-aebd-5b75-8311-4de50126a341;Pelt trader;http://www.pelttrader.co.uk;51,51105;-0,090972;City
+446;d6cd438a-af4f-52a7-b661-e1c5977e610b;La Tasca;https://www.latasca.com/venue/london-leadenhall-market/;51,512291;-0,083431;City
+447;3ebb1ceb-ca63-5457-bb54-8e57d9aec3a8;We grill;http://www.wegrill.co.uk;51,51265;-0,083292;City
+454;3da279a7-b8b3-52e1-aa1b-8e1bb247e549;Saporita;http://www.saporita.london/;51,514254;-0,104736;City
+458;ea3ac63b-4258-5c4a-9b5a-df7abdcec421;The India;http://theindia.org.uk/;51,511708;-0,092154;City
+462;bca6644e-0caf-56f5-8667-9ded1629297d;Mas Q Menos Farringdon;http://www.masqmenos.co.uk/;51,517334;-0,1042;City
+464;e6fcb823-399c-5b98-b098-0dca41e6bc5b;Wahaca St. Paul's;https://www.wahaca.co.uk/locations/wahaca-st-pauls/;51,514218;-0,095694;City
+467;fe0eebb7-0553-5cb7-b2fd-015f0085ed1c;Lebaneats;http://Www.lebaneats.co.uk;51,518382;-0,113264;City
+17;f8a855f0-88ac-54b2-bc0a-e54a00325727;Magpie;http://www.nicholsonspubs.co.uk/restaurants/london/themagpiebishopsgatelondon#;51,517351;-0,079053;City
+19;af35eac1-8e19-5a0f-b969-0125f3588e2f;Omnino Leadenhall;http://www.omninorestaurants.com;51,513637;-0,0783;City
+24;b527b845-a0cb-5c38-9d46-3da87cee101d;Hack and Hop;http://thehackandhop.com/food/;51,513936;-0,107252;City
+26;f72634f1-7d9f-58b5-a3db-6382039511db;Hispania London;http://www.hispanialondon.com;51,513111;-0,087454;City
+484;a43e6590-592d-5c36-ad27-455e805796ec;The Lion;http://lionec3.co.uk;51,515015;-0,078197;City
+502;e6f996b8-a7bc-509e-8380-a0c33a24063a;Pure;https://www.pure.co.uk/shops/cheapside/;51,51408;-0,093147;City
+34;beadfb92-37b6-57d7-8dbc-949cb18e28dc;Little Fable;http://drakeandmorgan.co.uk/the-little-fable;51,515837;-0,103656;City
+42;b3eb96d2-8d24-50e5-8133-105236b6fb5e;The Saint;http://www.thesaint.londonpubandbar.co.uk/;51,515261;-0,099688;City
+449;567cf887-ce5d-504f-afb3-e3a19ee91cb2;Daly's Wine Bar;http://www.dalyswinebar.co.uk;51,513191;-0,113031;City
+506;c0d1ea03-40b6-5fd7-8724-df04cae96cfc;Homeslice;http://www.homeslicepizza.co.uk/;51,512443;-0,092556;City
+509;a8c5d92c-bc31-54a7-b92f-733f7b3bf5a4;GOLDEN FLEECE;http://www.goldenfleececity.com/;51,51346;-0,092536;City
+515;5b6c86c8-9f57-59a8-bc80-698e7ea51158;The Maifair Chippy;https://www.mayfairchippy.com/;51,513363;-0,15323;City
+519;58a12187-e02f-5d0a-a443-fc7f8c44d66a;We are bar;http://wearebar.com/;51,519253;-0,079831;City
+43;04c5de7e-27bf-59d0-8444-2d07b0a2ce8c;MBER;http://www.mber.london;51,510757;-0,008541;City
+45;454a55d6-664c-597f-bef3-f316b4b820e6;Davy's at Woolgate Bar and Brasserie;http://www.davy.co.uk;51,516646;-0,091166;City
+47;fbc045ca-a1e9-5833-9dec-9813af600e84;Farmer J;http://www.farmerj.com;51,513783;-0,08065;City
+50;d6dd0c06-9f08-5861-b523-c840e2e4b3e6;Wagamama;https://www.wagamama.com/restaurants/st-pauls;51,513896;-0,100749;City
+522;5418d068-6126-5abd-bb50-43352f51cf6f;Aviary;http://www.aviarylondon.com;51,522042;-0,085676;City
+54;33347f31-ce76-5464-929a-2c9cc83ab78d;Kym's;https://www.kymsrestaurant.com/;51,512391;-0,091031;City
+57;200db631-253d-59c9-8613-2a4c06efbb53;Kaia;https://www.thened.com/restaurants/kaia;51,514133;-0,089612;City
+58;122a791f-f2ba-5f07-866e-f4ac0900a010;The Lord Aberconway;http://www.nicholsonspubs.co.uk/thelordaberconwayliverpoolstreetlondon/;51,517486;-0,083098;City
+75;7cb8a65e-d482-5988-8295-4fbdb64be7aa;Voltaire;http://www.voltairebar.com;51,512516;-0,104544;City
+78;31f7d17c-d1e4-54dd-a52a-dfff8f9cbc75;Grace St. Paul's;http://www.gracestpauls.com/;51,513439;-0,101225;City
+523;d8e2bb91-518b-5639-be8d-4b535c773c15;Brigadiers;https://brigadierslondon.com;51,512834;-0,07886;City
+525;de33a1bf-3f28-5483-a464-f8d100b13f3f;The Old Tea Warehouse;http://www.theoldteawarehouse.co.uk/;51,513824;-0,094048;City
+528;2b76649f-ea74-5d7b-8931-7383756a7223;Taberna Etrusca;http://tabernaetrusca.co.uk/;51,513626;-0,09601;City
+543;e378a499-bf72-5aae-baeb-860e3599d50c;Benugo;http://www.londonwallbarandkitchen.com/;51,518311;-0,086485;City
+565;3526c906-e4a9-5288-b5f1-858b5caf866e;Brasserie Blanc;https://brasserieblanc.com/?utm_source=tripadvisor&utm_medium=referral#;51,514321;-0,085721;City
+675;ea9dc040-8a83-53f9-a543-2f4ed8d4ee1a;Marco Pierre White Wheeler's Oyster Bar & Grill Room;http://www.mpwrestaurants.co.uk/restaurants/wheelers-london-bank;51,514529;-0,085721;City
+674;d92e1d6a-daea-5863-91bd-ab5101386210;Giovanni’s;http://giovanniscityroad.com/;51,522344;-0,087273;City
+673;0ad22214-08e2-5f0b-9aed-027657f6ebcb;Mangio;http://mangio.co.uk/;51,522336;-0,087315;City
+672;32e4e5e7-058b-5ba3-9064-0c8dd5855450;Jackson + Rye;http://www.jacksonrye.com/brasserie/city-bank/;51,51467;-0,090949;City
+80;baec26f4-1a4e-5e9c-be75-b6c79fe7648c;Scarpetta London;http://scarpetta.me/;51,511161;-0,087794;City
+81;daa1ccba-8701-5042-8ff0-efaeb84b8a20;The New Moon;http://www.newmoon-whitechapel.co.uk;51,513066;-0,084226;City
+90;4323c660-9a0e-550d-b0a2-2388f237f1ca;The Refinery CityPoint Bar & Restaurant;http://drakeandmorgan.co.uk/the-refinery-citypoint;51,519155;-0,090169;City
+94;a4522b20-f8b8-5f18-a967-bfa361a9a76b;Chinese Cricket Club;http://www.chinesecricketclub.com/;51,512469;-0,104644;City
+96;7553557e-f582-528c-85da-9069db11aac4;The Phoenix;http://www.thephoenixec2.co.uk;51,515194;-0,085848;City
+566;a7270797-15ee-5837-9c1a-9b2760a13969;Keepers;http://www.keeperslounge.co.uk;51,510936;-0,077156;City
+551;6ca03f2a-c62b-5151-b209-c6727ff63945;The pregnant man;http://thepregnantman.co.uk;51,516795;-0,112301;City
+550;86e27cdf-d351-5b2f-abc5-d417ac9c65c7;London Steakhouse Co.;https://www.londonsteakhousecompany.com;51,517698;-0,078031;City
+683;f59ee018-bce9-5132-8eea-610272d9e151;Cafe Rouge - St Pauls;http://www.caferouge.com/locations/st-pauls;51,513431;-0,099222;City
+685;e751712e-d9c0-5306-a910-ee6b311b7ee2;Leon;http://leon.co/restaurants/leadenhall/;51,512963;-0,083098;City
+689;e428ff41-9218-54f4-9b62-f9f058a77de4;Fleet Place;http://www.fleetplace.londonpubandbar.co.uk/;51,516736;-0,103295;City
+692;5a2a725a-0689-5fa0-8094-73de135b356b;The Walrus and The Carpenter;http://www.nicholsonspubs.co.uk/thewalrusandthecarpentermonumentlondon/;51,509739;-0,084201;City
+694;4261c3c1-ddaf-58fe-a9b1-053156d78565;Wood Street Bar & Restaurant;http://www.woodstreetbar.co.uk;51,5188;-0,092906;City
+715;cd012fcd-03ad-52e4-af74-7db56f75c358;Chop'd CityPoint;http://chopd.co.uk;51,519914;-0,089715;City
+686;576f3bb7-9f0e-5b96-941c-dbc430117399;Steam Wine Bar;http://www.steamwinebar.com/;51,510709;-0,084652;City
+717;7c069d6b-9f58-5818-b4b1-841b3e4656c6;Broker's Wine Bar and Restaurant;http://www.brokerswinebar.com;51,513117;-0,08374;City
+131;f98f5f91-e77e-5d1b-b7d2-33a1f30a83f5;Gaucho - City;http://www.gauchorestaurants.co.uk/restaurants/restaurant.php?id=city;51,512871;-0,084829;City
+134;83c1b900-5072-5d7d-8bab-a2cc6496b7bd;Mint Leaf Lounge;http://www.mintleaflondon.com;51,515127;-0,087952;City
+137;39b8c59a-8955-5a9d-8f81-13b54122b201;Silk & Grain;http://www.silkandgrain.co.uk;51,513432;-0,086363;City
+145;86f5bbf9-305c-597a-9f6e-0d1b8235573c;The Bell;http://www.redcarpubs.com/The-Bell;51,511223;-0,089464;City
+721;0fbb5c47-f72c-52c6-992b-5e5d50009f22;Darbaar Restaurant;http://www.darbaarrestaurants.com;51,521706;-0,082214;City
+732;ab55fdd8-1ca5-51e3-84d1-3737541b7bb7;Tossed;http://tosseduk.com;51,516854;-0,087576;City
+146;a3a72572-c41b-5948-9419-a6768849a9e0;The Harrow;http://www.harrowlondon.co.uk/;51,513181;-0,106747;City
+147;068f313c-4b95-508b-99fc-1d314ae1c25f;Mas Q Menos City;http://www.masqmenos.co.uk/;51,511428;-0,079767;City
+148;35487775-1107-5b64-a06e-a6e53af3d896;Caffe Vergnano 1882;http://www.caffevergnano1882.co.uk;51,51651;-0,107982;City
+153;434c3d18-de14-5fa8-8489-bcf6834da9d6;The Nickel Bar;http://www.thened.com/restaurants#the-nickel-bar;51,513984;-0,090082;City
+154;bc83c510-0b4e-58ac-bcb2-251445705657;The M Bar;http://www.mbarcity.co.uk;51,512485;-0,08392;City
+313;bb1c4601-4999-5dd4-bb55-df5c46547654;Cheeky Chicos;http://www.cheekychicos.co.uk/;51,513573;-0,104579;City
+315;cbfff860-7e6e-5c56-8909-fb842ed62ca0;Viaduct Tavern;http://www.viaducttavern.co.uk/;51,516476;-0,101757;City
+317;c496228d-d1c7-595e-a82e-618a9a695409;The Hydrant;http://www.thehydrant.co.uk;51,510587;-0,08633;City
+318;73fee24c-f373-5040-ac87-e493d680e291;Missouri Angel;http://www.missourigrill.com/;51,511901;-0,075754;City
+321;0b4330de-031f-52e7-aaee-f888bea66b25;Veeno London - St Paul's;http://www.theveenocompany.com;51,514239;-0,095323;City
+327;cdfda975-1228-5591-8639-a8a517fcec01;Caravaggio;http://www.caravaggiorestaurant.co.uk/;51,514417;-0,080753;City
+335;ea445250-11b4-5ab6-ac58-56f2d211dd0b;Hop;http://www.hopvietnamese.com/;51,520022;-0,085008;City
+340;3e785ecb-a68b-5a41-8f05-cb87d2dbba99;Relais de Venise;http://www.relaisdevenise.com/;51,514886;-0,08649;City
+597;1e4e6352-3e22-5a41-9c15-98582f819c1e;The Sugar Loaf;http://www.nicholsonspubs.co.uk/thesugarloafcannonstreet/;51,512515;-0,092521;City
+539;260bcb0a-8a88-53a0-8ea5-527c9e750412;Rucoletta;http://rucoletta.co.uk/;51,515319;-0,096274;City
+598;a061b679-1eec-503d-8497-d0af1a1f2042;Da Giua;http://www.dagiua.com;51,522349;-0,09273;City
+811;319fa9df-cc07-53cb-a404-c52f9323b1cb;Cigalon;http://www.cigalon.co.uk;51,514772;-0,111463;City
+814;5448e3b1-81c4-5ea7-be71-63c0b43fb0a3;The Hoop and Grapes;http://www.thehoopandgrapes.co.uk/;51,515656;-0,105055;City
+341;c6f4409f-92e3-52f6-ad70-f4d178443a4f;Cafe Below;http://www.cafebelow.co.uk/;51,513907;-0,09354;City
+355;820c9e51-fa1c-5633-8dce-1dbf3e1533fd;My Pasta Bar;http://www.mypastabar.co.uk/;51,514069;-0,109493;City
+819;40de8bc4-398e-5ac4-acd0-7b57d921ab45;Notes Moorgate;http://www.notes-uk.co.uk;51,519698;-0,089994;City
+163;36a8aded-db7a-5893-8c2a-0e88a6b05d45;Jamies - Suffolk Lane;http://www.jamiesbars.co.uk/bars/suffolk-lane;51,511171;-0,089281;City
+361;4a32f52b-072a-5168-a799-281ab58c70bb;Bibimbap to Go;http://bibimbaptogo.co.uk;51,512585;-0,083736;City
+366;f0b6fb39-4065-54fa-bdac-a40d86e8ab90;Falafel House;http://www.falafel-house.co.uk/;51,513509;-0,101504;City
+367;d3a4d12b-e79a-54cd-a512-498ad75f6b8a;L'Anima Cafe;http://lanimacafe.co.uk;51,522156;-0,081725;City
+372;8b26a28a-04d8-5603-a540-491d1a7788cd;Breakfast and. Burgers;http://breakfastandburgers.com/;51,513975;-0,080608;City
+384;21820ee0-efd7-51d5-9344-4fe66a1f07cb;Maison Mekong;http://www.maisonmekong.com/;51,513211;-0,100688;City
+849;36a2f1b9-5fd8-5495-9864-dd55f7b94b7e;Vertigo 42;http://www.vertigo42.co.uk;51,515448;-0,083769;City
+848;1bba0ab5-a220-520e-8a75-6defe3a0db67;Darwin Brasserie;http://skygarden.london/;51,511364;-0,083565;City
+742;f2212eee-aeff-509a-b1b4-17cb350021c2;Jamies;http://www.jamies.london/bars/ludgate-hill/;51,514006;-0,102568;City
+859;7b471cab-ceb5-58a5-9e7a-5dd3c11524ec;Nandos;https://www.tripadvisor.com/Restaurant_Review-g186338-d2041968-Reviews-Nando_s-London_England.html;51,51367;-0,095505;City
+865;a0ab79f2-754a-597e-a4c3-a9047bb53082;Adriatico Bacari;http://www.adriaticobacari.co.uk;51,514079;-0,078729;City
+882;f127d634-a3b7-5385-8306-185001eea0c0;Magpie Stump;http://magpieandstump.com;51,516107;-0,102459;City
+880;8d0c581b-9797-5b42-bebb-6d5874d3f97c;East Way;https://www.tripadvisor.com/Restaurant_Review-g186338-d1367600-Reviews-Eastway_Brasserie-London_England.html;51,517698;-0,081563;City
+897;1c04f859-ecce-5ee7-9193-e1dc26abd49b;Fora restaurant;http://www.forarestaurants.co.uk;51,515146;-0,078232;City
+861;0e449d31-6fe7-5c77-8753-e22f07ff244f;Forge;https://www.forgedinlondon.com/london-bar;51,513363;-0,087108;City
+164;acad0c73-0021-5b1b-86d7-f0578c4fd6d8;Grabthai;https://www.grabthai.uk;51,519959;-0,079788;City
+165;9e967c73-f670-59f5-a80a-8cc22419382f;Sfoglia BO;https://www.tripadvisor.com/Restaurant_Review-g186338-d11876926-Reviews-Mattarello_Restaurant-London_England.html;51,51566;-0,075643;City
+919;1958615b-1aa5-5030-a269-84dd9be5d7e0;Pitt Cue;http://www.pittcue.co.uk;51,516603;-0,078267;City
+922;e81f00ed-ec90-5ca8-8ddd-79c80813ddd3;Dion;http://dionlondon.co.uk;51,514692;-0,097878;City
+929;a2fea379-0551-5c47-b16a-1cc67e5e193b;The kings arms;https://www.greeneking-pubs.co.uk/;51,516614;-0,082628;City
+951;55303ca3-1d7c-511d-8418-e4b76f839925;Cheese at Leadenhall;https://cheeseatleadenhall.co.uk;51,513129;-0,083817;City
+953;6d375790-ca96-55ce-9087-5a776025cb01;Assenheim 56;http://assenheims.com/;51,513666;-0,102797;City
+954;938eca54-4a82-5f59-a417-a365cf604260;Pilpel;https://www.pilpel.co.uk;51,514569;-0,107307;City
+957;a4606390-e658-5b53-b515-03220edc387d;La Dame de Pic London;https://ladamedepiclondon.co.uk;51,510322;-0,078001;City
+958;ae9bf03d-7571-5704-a445-e548296cd042;Cote Brasserie - St Pauls;https://www.cote.co.uk;51,514145;-0,101071;City
+961;e43a3757-457d-5012-b34b-05e885404105;GRABTHAI Bangkok Caf? - Liverpool Street;https://www.grabthai.uk;51,519973;-0,0798;City
+965;6b3c90a5-ef63-5183-a204-71ee4a9dfb8a;Pod;http://www.pod.co.uk;51,516916;-0,078286;City
+169;f1154d73-9d18-5cb3-b65e-0412311b895a;The Bottlescrue;https://www.davy.co.uk;51,515609;-0,096438;City
+172;f5c66142-e855-51f0-9bb4-b634e27c0168;APULIA;http://apuliarestaurant.co.uk;51,519239;-0,100464;City
+181;bd4f6d10-5349-5ca7-aa27-881cc00347f0;Chop'd;https://chopd.co.uk;51,511454;-0,07943;City
+943;dea6a446-5dc4-5586-8d09-581b6277303a;St Brides Tavern ;http://www.stbridestavern.co.uk;51,5135;-0,104657;City
+944;97311985-0db1-5e7f-9cae-83c12e8a6e38;Jose pizarro;https://josepizarro.com/jose-pizarro-broadgate;51,51904;-0,083135;City
+932;a9712334-e4c3-57bb-9e4e-3056643c8158;Royal Exchange Grind;https://grind.co.uk/pages/royal-exchange-grind;51,513915;-0,087741;City
+946;25a995a7-b84c-5f69-bee7-4a760ffde3f8;Karaoke Box;http://website.karaokebox.co.uk;51,518099;-0,103214;City
+433;fb4d4778-e0ba-573d-9493-761f3529f5c0;Patty & Bun;https://www.pattyandbun.co.uk/;51,51752;-0,08233;City
+469;757d7ba2-b6a6-5efa-9f75-c2383c982b5c;AMT Coffee;http://amtcoffee.co.uk;51,517831;-0,084308;City
+1051;00d29a58-c4a2-550d-9f4e-9ac2b9120499;Three tunes;https://www.greeneking-pubs.co.uk;51,514765;-0,155987;City
+903;4245de7d-c963-5eed-9a84-3f0e47629eb0;El Vino Fleet Street;https://elvino.co.uk;51,514253;-0,109225;City
+329;977298a2-68e6-54da-b150-bbeeee20d204;The Grill on the Market;http://blackhouse.uk.com;51,518629;-0,102328;City
+889;79ddb69d-aa87-5e55-86ce-ea09805266e9;The ship;https://www.nicholsonspubs.co.uk;51,511302;-0,084786;City
+716;138a0b20-a7ee-599a-8690-311d42fe6003;Broadleaf;https://broadleaflondon.com/;51,515311;0,083211;City
+182;c2d573e9-ef7d-5819-812f-922b53a7c1d4;Boisdale of Bishopsgate;https://www.boisdale.co.uk/bishopsgate/the-venue/;51,518327;-0,079553;City
+881;4850daf1-46f5-5092-8712-8d9bac34656c;The fat bar;http://www.thefatbear.co.uk/;51,513351;-0,101299;City
+753;3fc69a7d-5e02-50a0-acee-a10cc89915f4;Shake Shack Mansion House;https://www.tripadvisor.com/Restaurant_Review-g186338-d14914145-Reviews-Shake_Shack_Mansion_House-London_England.html;51,512921;-0,094065;City
+770;7f05887a-3772-5d69-aaa3-738ea5b72273;Caravan City;https://www.caravanrestaurants.co.uk;51,512173;-0,091172;City
+183;0bcfee8d-7b50-5df4-b0c2-2e8be2ef64d2;Cinnamon Kitchen City;http://www.cinnamon-kitchen.com/;51,517295;-0,078492;City
+185;c0ec2f5b-c708-5b75-ab60-570d628ad935;Polo Bar;http://polo24hourbar.co.uk;51,517808;-0,080124;City
+190;520235be-8420-5a6f-acf9-9ef79c4137c1;El Vino Blackfriars;https://elvino.co.uk;51,512613;-0,103907;City
+193;a63dea7e-9d36-56d5-81dd-4251471e4a97;Nyokee;http://nyokee.co.uk;51,512261;-0,093702;City
+194;1a1cf1b9-e889-5dd4-bfaa-d40e289d7ade;Comptoir Libanais;https://www.comptoirlibanais.com;51,519092;-0,083746;City
+195;a1235a2f-1a84-5251-85f4-47042e724b0c;Assenheims 56;http://assenheims.com;51,516729;-0,087515;City
+1050;fa4cd788-2a1e-5db1-b83f-ec4248879745;The Mercer;http://www.themercer.co.uk;51,514384;-0,08633;City
+1049;a5a2968a-779f-57d4-9cef-932cd9a103e7;The Temple Brew House;https://www.templebrewhouse.com;51,513138;-0,113009;City
+196;3aec0db8-29b2-5ec1-85f2-6838a61f3b71;Humble Grape - Fleet Street;https://www.humblegrape.co.uk;51,513818;-0,105264;City
+198;9c15acdb-01b0-51f5-b396-e2d2106d42f7;Enoteca Da Luca;https://enotecadaluca.co.uk/guildhall/;51,515791;-0,090879;City
+203;ed3a9b05-e6c9-51e3-b03b-5683748331a2;Kudos Delivered;https://kudosdelivered.co.uk;51,514811;-0,083672;City
+779;4b479ea9-473f-5343-8856-e5e90bf9eee4;Bad Egg;https://www.badegg.london;51,519401;-0,08976;City
+785;b75d5a5e-06c7-553e-b6a7-dfd7c23673f3;Caf? Brera;https://www.cafebrera.com/;51,512356;-0,079174;City
+1046;3e569351-6fbd-54f9-b896-47df3fa4df23;Merchant of Bishopsgate Freehouse & Kitchen;http://www.iamthemerchant.com;51,518965;-0,081437;City
+1045;6d2bb88c-467f-51ec-9d2c-e520c3ff07a3;Ye Olde Watling;https://www.tripadvisor.com/Restaurant_Review-g186338-d10686444-Reviews-Ye_Olde_Watling-London_England.html;51,513193;-0,093546;City
+1043;34699562-0aeb-55fa-a904-c9856edf3571;Patch Bar;https://www.patch-bar.co.uk;51,513614;-0,102016;City
+1038;ecba5660-4590-5612-95a6-dac0757a56be;Bengal Tiger;http://bengal-tiger.co.uk;51,513562;-0,102159;City
+1036;ce4a41da-9a64-5200-b1b5-4c6f3845e7d3;Street Pizza Gordon Ramsay;https://www.gordonramsayrestaurants.com;51,513545;-0,095018;City
+1034;f06f8ddf-4da5-50b3-a974-0020ea6331ea;Spagbowl;https://spagbowl.london;51,519684;-0,089977;City
+1030;0805dd0a-9652-5a82-bb3c-a4f3683926fc;Leon - Cannon Street;https://leon.co;51,511572;-0,089189;City
+1029;dc71a507-f860-5dd5-8e72-4d4bd0344274;Kenza Restaurant;https://www.kenza-restaurant.com;51,516848;-0,078944;City
+786;917c7cf7-7167-5872-8bd5-e58cbb8bc04c;Chamberlain's of London;https://chamberlainsoflondon.co.uk;51,51281;-0,083665;City
+787;4a8c703a-0efc-533f-8472-f398d92a0832;Ask For Janice;http://askforjanice.co.uk;51,519291;-0,100348;City
+719;4c14c530-fe18-59e9-914b-875be6cfe734;The Blackfriar;https://www.nicholsonspubs.co.uk;51,512308;-0,103713;City

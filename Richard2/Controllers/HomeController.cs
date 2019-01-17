@@ -25,29 +25,15 @@ namespace Richard2.Controllers
 
         
         public ActionResult SomeActionMethod()
-        {
-            //var employees = DataRepository.GetEmployees();
-
-            ////"Business logic" methog that filter employees by the employer id
-            //var companyEmployees = (from e in employees
-            //                        where (CompanyID == null || e.CompanyID == CompanyID)
-            //                        select e).ToList();
-
-            ////UI processing logic that filter company employees by name and paginates them
-            //var filteredEmployees = (from e in companyEmployees
-            //                         where (param.sSearch == null || e.Name.ToLower().Contains(param.sSearch.ToLower()))
-            //                         select e).ToList();
-            //var result = from emp in filteredEmployees.Skip(param.iDisplayStart).Take(param.iDisplayLength)
-            //             select new[] { Convert.ToString(emp.EmployeeID), emp.Name, emp.Position };
-
-            //var companies = DataRepository.GetCompanies();
-            var companies = System.IO.File.ReadAllLines("Models\\Data\\company_list.csv")
+        {           
+            var companies = System.IO.File.ReadAllLines("Models\\Data\\restaurants_list.csv")
                                            .Skip(1)
-                                           .Select(v => new Company(v))
+                                           .Select(v => new Restaurants(v))
                                            .ToList();
 
             //var result = companies;
-            var result = from emp in companies select new[] {Convert.ToString(emp.ID), Convert.ToString(emp.Name), emp.Address, emp.Town};
+            var result = from emp in companies select new[] {Convert.ToString(emp.ID), Convert.ToString(emp.Name), Convert.ToString(emp.Website),
+                                                            Convert.ToString(emp.Neighborhood)};
             return Json(new
             {
               
@@ -78,19 +64,23 @@ namespace Richard2.Controllers
         public ActionResult MasterDetailsAjaxHandler(JQueryDataTableParamModel param, int? CompanyID)
         {
 
-            var employees = DataRepository.GetEmployees();
+            //var employees = DataRepository.GetEmployees();
 
+            var employees = System.IO.File.ReadAllLines("Models\\Data\\menu_sample.csv")
+                                           .Skip(1)
+                                           .Select(v => new Menus(v))
+                                           .ToList();
             //"Business logic" methog that filter employees by the employer id
             var companyEmployees = (from e in employees
-                                    where (CompanyID == null || e.CompanyID == CompanyID)
+                                    where (CompanyID == 0 || e.RestID == CompanyID) //Change display settings here
                                     select e).ToList();
 
             //UI processing logic that filter company employees by name and paginates them
             var filteredEmployees = (from e in companyEmployees
-                                     where (param.sSearch == null || e.Name.ToLower().Contains(param.sSearch.ToLower()))
+                                     where (param.sSearch == null || e.RestaurantName.ToLower().Contains(param.sSearch.ToLower()))
                                      select e).ToList();
             var result = from emp in filteredEmployees.Skip(param.iDisplayStart).Take(param.iDisplayLength)
-                         select new[] { Convert.ToString(emp.EmployeeID), emp.Name, emp.Position };
+                         select new[] { Convert.ToString(emp.ItemName), emp.Description, Convert.ToString(emp.Price)};
 
             return Json(new
             {
