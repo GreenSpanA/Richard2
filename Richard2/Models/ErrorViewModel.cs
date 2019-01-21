@@ -1,5 +1,6 @@
 using System;
 
+
 namespace Richard2.Models
 {
     public class ErrorViewModel

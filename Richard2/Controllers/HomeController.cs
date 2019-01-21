@@ -6,24 +6,132 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Richard2.Models;
 //using System.IO;
+using Microsoft.AspNetCore.Http;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.FileProviders;
+using System.Collections.Generic;
 
 namespace Richard2.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        //21.01
+        private readonly IFileProvider fileProvider;
+
+        public HomeController(IFileProvider fileProvider)
         {
-            return View();
+            this.fileProvider = fileProvider;
         }
+
+
+        [HttpPost]
+        public async Task<IActionResult> UploadFile(IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return Content("file not selected");
+
+            var path = Path.Combine(
+                        Directory.GetCurrentDirectory(), "wwwroot",
+                        file.GetFilename());
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await file.CopyToAsync(stream);
+            }
+
+            return RedirectToAction("Files");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UploadFileViaModel(FileInputModel model)
+        {
+            if (model == null ||
+                model.FileToUpload == null || model.FileToUpload.Length == 0)
+                return Content("file not selected");
+
+            var path = Path.Combine(
+                        Directory.GetCurrentDirectory(), "wwwroot",
+                        model.FileToUpload.GetFilename());
+
+            using (var stream = new FileStream(path, FileMode.Create))
+            {
+                await model.FileToUpload.CopyToAsync(stream);
+            }
+
+            return RedirectToAction("Files");
+        }
+
+
+        public IActionResult Files()
+        {
+            var model = new FilesViewModel();
+            foreach (var item in this.fileProvider.GetDirectoryContents(""))
+            {
+                model.Files.Add(
+                    new FileDetails { Name = item.Name, Path = item.PhysicalPath });
+            }
+            return View(model);
+        }
+
+        public async Task<IActionResult> Download(string filename)
+        {
+            if (filename == null)
+                return Content("filename not present");
+
+            var path = Path.Combine(
+                           Directory.GetCurrentDirectory(),
+                           "wwwroot", filename);
+
+            var memory = new MemoryStream();
+            using (var stream = new FileStream(path, FileMode.Open))
+            {
+                await stream.CopyToAsync(memory);
+            }
+            memory.Position = 0;
+            return File(memory, GetContentType(path), Path.GetFileName(path));
+        }
+
+        private string GetContentType(string path)
+        {
+            var types = GetMimeTypes();
+            var ext = Path.GetExtension(path).ToLowerInvariant();
+            return types[ext];
+        }
+
+        private Dictionary<string, string> GetMimeTypes()
+        {
+            return new Dictionary<string, string>
+            {
+                {".txt", "text/plain"},
+                {".pdf", "application/pdf"},
+                {".doc", "application/vnd.ms-word"},
+                {".docx", "application/vnd.ms-word"},
+                {".xls", "application/vnd.ms-excel"},
+                {".xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"},
+                {".png", "image/png"},
+                {".jpg", "image/jpeg"},
+                {".jpeg", "image/jpeg"},
+                {".gif", "image/gif"},
+                {".csv", "text/csv"}
+            };
+        }
+
+
+        //
+        public IActionResult Index()
+        {  
+           return View();
+           
+        }        
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
             return View();
-        }
+        }        
 
-        
         public ActionResult RestaurantsHandler()
         {           
             var companies = System.IO.File.ReadAllLines("Models\\Data\\restaurants_list.csv")
