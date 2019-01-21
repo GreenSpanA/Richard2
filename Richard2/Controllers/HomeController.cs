@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
+//using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Richard2.Models;
-using System.IO;
+//using System.IO;
 
 namespace Richard2.Controllers
 {
@@ -24,7 +24,7 @@ namespace Richard2.Controllers
         }
 
         
-        public ActionResult SomeActionMethod()
+        public ActionResult RestaurantsHandler()
         {           
             var companies = System.IO.File.ReadAllLines("Models\\Data\\restaurants_list.csv")
                                            .Skip(1)
@@ -45,7 +45,7 @@ namespace Richard2.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "If you have any question...";
 
             return View();
         }
@@ -70,7 +70,8 @@ namespace Richard2.Controllers
                                            .ToList();
             //"Business logic" methog that filter menu items by the rest id
             var companyEmployees = (from e in employees
-                                    where (CompanyID == 0 || e.RestID == CompanyID) //Change display settings here
+                                        //where (CompanyID == null || e.RestID == CompanyID) 
+                                    where (e.RestID == CompanyID)
                                     select e).ToList();
 
             //UI processing logic that filter company employees by name and paginates them
@@ -89,7 +90,7 @@ namespace Richard2.Controllers
                 iTotalDisplayRecords = filteredEmployees.Count,
                 aaData = result
             });
-        }
+        }  
 
 
     }

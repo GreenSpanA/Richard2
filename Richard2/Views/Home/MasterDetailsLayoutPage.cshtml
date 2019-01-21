@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html>
 <head>
     <title>Implementation of Master-Details tables using a JQuery DataTables plugin</title>
     <link href="@Url.Content("Content/dataTables/demo_page.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("/Content/dataTables/demo_table.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("/Content/dataTables/demo_table_jui.css")" rel="stylesheet" type="text/css" />
-        <link href="@Url.Content("/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" media="all" />
-        <link href="@Url.Content("/Content/themes/smoothness/jquery-ui-1.7.2.custom.css")" rel="stylesheet" type="text/css" media="all" />
+    <link href="@Url.Content("/Content/dataTables/demo_table.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("/Content/dataTables/demo_table_jui.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("/Content/themes/base/jquery-ui.css")" rel="stylesheet" type="text/css" media="all" />
+    <link href="@Url.Content("/Content/themes/smoothness/jquery-ui-1.7.2.custom.css")" rel="stylesheet" type="text/css" media="all" />
 
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,10 +21,14 @@
 
     @RenderSection("head", required: false)
 </head>
-<body id="dt_example">
-    <div id="container">
-        <a href="/Home/About">Master/Details Table</a>
-        @RenderBody()
+
+<body>   
+    <div id="dt_example">
+
+        <div id="container">
+            <a href="/Home/Index">Home Page</a>
+            @RenderBody()
+        </div>
     </div>
 </body>
 </html>

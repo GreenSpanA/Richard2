@@ -32,6 +32,7 @@ namespace Richard2
             });
 
 
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

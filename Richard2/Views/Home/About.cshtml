@@ -9,12 +9,13 @@
 
         $(document).ready(function () {
 
-            /* Initialize master table - optionally */         
+            /* Initialize master table - optionally */
 
             var oCompaniesTable = $('#companies').DataTable({
-                "sScrollY": "100px",
-                "bJQueryUI": true,                
-                "sAjaxSource": "SomeActionMethod",
+                "sScrollY": "20vh",
+                "scrollCollapse": true,               
+                "bJQueryUI": true,
+                "sAjaxSource": "RestaurantsHandler",
                 "bProcessing": true
             });
 
@@ -30,7 +31,7 @@
 
             //Get Employess data
             var oEmployeesTable = $('#employees').dataTable({
-                "sScrollY": "100px",
+                "sScrollY": "50vh",
                 "bJQueryUI": true,
                 "bServerSide": true,
                 "sAjaxSource": "MasterDetailsAjaxHandler",
@@ -43,48 +44,69 @@
                 }
             });
 
-           //Get Rest_id clicking on tr
+            //Get Rest_id clicking on tr
             $('#companies tbody').on('click', 'tr', function () {
-                var data = oCompaniesTable.row(this).data();                
-                MasterRecordID = parseInt(data[0]);               
+                var data = oCompaniesTable.row(this).data();
+                MasterRecordID = parseInt(data[0]);
                 oEmployeesTable.fnDraw();
             });
         });
     </script>
 }
 
-    <div id="demo">
-        <table id="companies" class="display">
-            <thead>
-                <tr>
-                    <th>RestID</th>
-                    <th>Restaurant Name</th>
-                    <th>Address</th>
-                    <th>Neighborhood</th>
-                </tr>
-            </thead>
-
-            <tbody> </tbody>         
-           
-        </table> 
-        
-        <table id="employees" class="display">
-            <thead>
-                <tr>
-                    <th>ItemName</th>
-                    <th>Description</th>
-                    <th>VegComment</th>
-                    <th>Price</th>
-                    <th>Category</th>
-                    <th>Comment</th>
-                    <th>SizeComment</th>
-                    <th>PriceComment</th>
-                    <th>MenuLink</th>                    
-                    <th>MenuType</th>
-                    <th>RestID</th>
-                    <th>UpdateTime</th>                 
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Richard2</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+            </ul>
+        </div>
     </div>
+</nav>
+
+<div id="demo" style="margin-top: 40px;">
+    <table id="companies" class="display">
+        <thead>
+            <tr>
+                <th>RestID</th>
+                <th>Restaurant Name</th>
+                <th>Address</th>
+                <th>Neighborhood</th>
+            </tr>
+        </thead>
+
+        <tbody> </tbody>
+
+    </table>
+
+    <table id="employees" class="display">
+        <thead>
+            <tr>
+                <th>ItemName</th>
+                <th>Description</th>
+                <th>VegComment</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Comment</th>
+                <th>SizeComment</th>
+                <th>PriceComment</th>
+                <th>MenuLink</th>
+                <th>MenuType</th>
+                <th>RestID</th>
+                <th>UpdateTime</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
