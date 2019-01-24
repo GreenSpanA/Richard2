@@ -35,7 +35,7 @@ namespace Richard2.Controllers
             //            Directory.GetCurrentDirectory(), "wwwroot",
             //            file.GetFilename());
             var path = Path.Combine(
-                      Directory.GetCurrentDirectory(), "wwwroot",
+                      Directory.GetCurrentDirectory(), "wwwroot/PDF",
                       "menu.pdf");
 
 
@@ -56,7 +56,7 @@ namespace Richard2.Controllers
                 return Content("file not selected");
 
             var path = Path.Combine(
-                        Directory.GetCurrentDirectory(), "wwwroot",
+                        Directory.GetCurrentDirectory(), "wwwroot//PDF",  
                         model.FileToUpload.GetFilename());
 
             using (var stream = new FileStream(path, FileMode.Create))
@@ -80,6 +80,13 @@ namespace Richard2.Controllers
             return View(model);
         }
 
+        public FileResult GetReport()
+        {
+            string ReportURL = "wwwroot\\PDF\\menu.pdf";
+            byte[] FileBytes = System.IO.File.ReadAllBytes(ReportURL);
+            return File(FileBytes, "application/pdf");
+        }
+
         public async Task<IActionResult> Download(string filename)
         {
             if (filename == null)
@@ -87,7 +94,7 @@ namespace Richard2.Controllers
 
             var path = Path.Combine(
                            Directory.GetCurrentDirectory(),
-                           "wwwroot", filename);
+                           "wwwroot/PDF", filename);
 
             var memory = new MemoryStream();
             using (var stream = new FileStream(path, FileMode.Open))

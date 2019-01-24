@@ -141,8 +141,15 @@
                 //    listItem.appendChild(para);
                 //}
                 para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+                var a = document.createElement('a');
+                var linkText = document.createTextNode("my title text");
+                a.appendChild(linkText);
+                a.title = "my title text";
+                a.href = "Home/GetReport";                       
+                document.body.appendChild(a);
 
                 list.appendChild(listItem);
+                listItem.appendChild(a);
                 listItem.appendChild(para);
             }
         }
