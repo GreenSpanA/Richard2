@@ -9,6 +9,13 @@ form {
     padding: 20px;
     border: 1px solid black;
 }*/
+    .file_select_div {
+        margin-top: 100px;       
+    }
+
+    .file_selected_div {
+        margin-top: 50px;
+    }
 
     form ol {
         padding-left: 0;
@@ -28,13 +35,14 @@ form {
     }
 
     form img {
-        height: 64px;
+        /*height: 64px;*/
         order: 1;
+        position: absolute;
     }
 
     form p {
         line-height: 32px;
-        padding-left: 10px;
+        padding-left: 20px;
     }
 
     form label, form button {
