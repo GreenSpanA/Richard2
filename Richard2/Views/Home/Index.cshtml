@@ -2,6 +2,8 @@
     ViewData["Title"] = "Home Page";
 }
 
+<link href="~/css/Index_page.css" rel="stylesheet" />
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -88,29 +90,87 @@
 </div>
 
 <div class="row">
-    @*<form method="post" enctype="multipart/form-data" asp-controller="UploadFiles" asp-action="Index">
-                <div class="form-group">
-                    <div class="col-md-10">
-                        <p>Upload one or more files using this form:</p>
-                        <input type="file" name="files" multiple />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-10">
-                        <input type="submit" value="Upload" />
-                    </div>
-                </div>
-        </form>*@
-
     <form asp-controller="Home" asp-action="UploadFile" method="post"
           enctype="multipart/form-data">
-
-        <input type="file" name="file" />
-        <button type="submit">Upload File</button>
+        <div>
+            <label for="image_uploads">Choose menu to upload (PDF ONLY)</label>
+            <input type="file" id="image_uploads" name="file" accept=".pdf">
+        </div>
+        <div class="preview">
+            <p id="file_choose">No files currently selected for upload</p>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
     </form>
-
-
-
 </div>
+
+
+
+<script>
+    var input = document.querySelector('input');
+    var preview = document.querySelector('.preview');
+
+    input.style.opacity = 0; input.addEventListener('change', updateImageDisplay); function updateImageDisplay() {
+        while (preview.firstChild) {
+            preview.removeChild(preview.firstChild);
+        }
+
+        var curFiles = input.files;
+        if (curFiles.length === 0) {
+            var para = document.createElement('p');
+            para.textContent = 'No files currently selected for upload';
+            preview.appendChild(para);
+        } else {
+            var list = document.createElement('ol');
+            preview.appendChild(list);
+            for (var i = 0; i < curFiles.length; i++) {
+                var listItem = document.createElement('li');
+                var para = document.createElement('p');
+                //if (validFileType(curFiles[i])) {
+                //    para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+                //    var image = document.createElement('iframe ');
+                //    //image.src = window.URL.createObjectURL(curFiles[i]);
+                //    image.src = 'https://docs.google.com/gview?url=' + window.URL.createObjectURL(curFiles[i]) +'&embedded=true'
+
+                //    listItem.appendChild(image);
+                //    listItem.appendChild(para);
+
+                //} else {
+                //    para.textContent = 'File name ' + curFiles[i].name + ': Not a valid file type. Update your selection.';
+                //    listItem.appendChild(para);
+                //}
+                para.textContent = 'File name ' + curFiles[i].name + ', file size ' + returnFileSize(curFiles[i].size) + '.';
+
+                list.appendChild(listItem);
+                listItem.appendChild(para);
+            }
+        }
+    } var fileTypes = [
+        'image/jpeg',
+        'image/jpeg',
+        'image/pdf',
+        'image/png'
+    ]
+
+    function validFileType(file) {
+        for (var i = 0; i < fileTypes.length; i++) {
+            //if (file.type === fileTypes[i]) {
+            //    return true;
+            //}
+            return true;
+        }
+
+        return false; iframe 
+    } function returnFileSize(number) {
+        if (number < 1024) {
+            return number + 'bytes';
+        } else if (number > 1024 && number < 1048576) {
+            return (number / 1024).toFixed(1) + 'KB';
+        } else if (number > 1048576) {
+            return (number / 1048576).toFixed(1) + 'MB';
+        }
+    }
+</script>
 
 

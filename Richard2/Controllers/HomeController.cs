@@ -31,16 +31,21 @@ namespace Richard2.Controllers
             if (file == null || file.Length == 0)
                 return Content("file not selected");
 
+            //var path = Path.Combine(
+            //            Directory.GetCurrentDirectory(), "wwwroot",
+            //            file.GetFilename());
             var path = Path.Combine(
-                        Directory.GetCurrentDirectory(), "wwwroot",
-                        file.GetFilename());
+                      Directory.GetCurrentDirectory(), "wwwroot",
+                      "menu.pdf");
+
 
             using (var stream = new FileStream(path, FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            return RedirectToAction("Files");
+            //return RedirectToAction("Files");
+            return RedirectToAction("Index");
         }
 
         [HttpPost]
@@ -59,7 +64,8 @@ namespace Richard2.Controllers
                 await model.FileToUpload.CopyToAsync(stream);
             }
 
-            return RedirectToAction("Files");
+            //return RedirectToAction("Files");
+            return RedirectToAction("Index");
         }
 
 
