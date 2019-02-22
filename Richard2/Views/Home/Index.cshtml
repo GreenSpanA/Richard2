@@ -96,7 +96,7 @@
 </div>
 
 
-<div class="row">
+@*<div class="row">
     <form asp-controller="Home" asp-action="UploadFile" method="post"
           enctype="multipart/form-data" target="_blank">
         <div>
@@ -114,7 +114,21 @@
     @*<div>
         <button onclick="myFunction()" type="submit">Submit</button>
     </div>*@
+@*</div>*@
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+            <a href="http://95.216.140.84:5000/" class="btn btn-default">Go to upload your file</a>
+        </div>
+        <div class="col-sm-9">
+            Please pay your attention that in processed files we obtain <b>only green</b> boxes with categories.
+            Other boxes are technicals and means nothing
+        </div>
+    </div>
 </div>
+
 
 
 <div class="file_selected_div">
@@ -126,6 +140,16 @@
     </div>
 </div>
 
+
+<div class="row">
+    <h1 class="text-center">Main challenges with pdf</h1>
+
+    It is indeed curious then, that the Portable Document Format (PDF) standard, one
+    of the most used document standards for electronic document archiving,  does not normally represent information in a manner which preserves structure or
+    semantics in a computer-understandable way. PDF documents are primarily organized
+    at a comparatively low level of typesetting instructions.
+
+</div>
 
 
 <script>
@@ -192,7 +216,7 @@
             //listItem.appendChild(a);
             listItem.appendChild(para);
             //}
-        }       
+        }
 
     }
     function myFunction() {
@@ -236,9 +260,9 @@
 
 
 @*<script>
-    function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
-    }
-</script>*@
+        function myFunction() {
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script>*@
 
 
