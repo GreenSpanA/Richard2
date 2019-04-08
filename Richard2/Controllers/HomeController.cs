@@ -163,7 +163,7 @@ namespace Richard2.Controllers
                 iTotalDisplayRecords = companies.Count,
                 aaData = result
             });
-        }
+        }      
 
         public IActionResult Contact()
         {
@@ -212,7 +212,27 @@ namespace Richard2.Controllers
                 iTotalDisplayRecords = filteredEmployees.Count,
                 aaData = result
             });
-        }  
+        }
+
+        public ActionResult MenuSampleHandler()
+        {
+            var menus = System.IO.File.ReadAllLines("Models\\Data\\Rewiew_Sample_2.csv")
+                                           .Skip(1)
+                                           .Select(v => new RewiewMenus(v))
+                                           .ToList();
+
+            //var result = companies;
+            var result = from menu in menus
+                         select new[] {Convert.ToString(menu.ItemName), Convert.ToString(menu.Description), Convert.ToString(menu.VegComment),
+                                                            Convert.ToString(menu.Price), Convert.ToString(menu.Category)};
+            return Json(new
+            {
+
+                iTotalRecords = menus.Count,
+                iTotalDisplayRecords = menus.Count,
+                aaData = result
+            });
+        }
 
 
     }

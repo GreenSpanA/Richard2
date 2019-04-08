@@ -1059,6 +1059,9 @@ var PDFViewerApplication = {
     var filename = this.contentDispositionFilename || (0, _ui_utils.getPDFFileNameFromURL)(this.url);
     var downloadManager = this.downloadManager;
 
+      
+   
+
     downloadManager.onerror = function (err) {
       _this3.error("PDF failed to download: ".concat(err));
     };

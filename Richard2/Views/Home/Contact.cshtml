@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Home/MasterDetailsLayoutPage.cshtml";
 }
 
 <html dir="ltr" mozdisallowselectionprint>
@@ -16,10 +16,42 @@
     <link rel="resource" type="application/l10n" href="locale/locale.properties">
     <script src="~/js/pdf.js"></script>
     <script src="~/js/viewer.js"></script>
+
+    <script language="javascript" type="text/javascript">
+
+        $(document).ready(function () {
+
+            /* Initialize master table - optionally */
+
+            var MenusTable = $('#menu').DataTable({
+                "sScrollY": "80vh",
+                "scrollCollapse": true,
+                "bJQueryUI": true,
+                "sAjaxSource": "MenuSampleHandler",
+                "bProcessing": true,
+                "lengthMenu": [[25, 50, -1], [25, 50, "All"]]
+            });
+
+            /* Add a click handler to the rows - this could be used as a callback */
+            $("#companies tbody").click(function (event) {
+                $(MenusTable.fnSettings().aoData).each(function () {
+                    $(this.nTr).removeClass('row_selected');
+                });
+                $(event.target.parentNode).addClass('row_selected');
+            });
+
+            var MasterRecordID = null;            
+
+           
+        });
+    </script>
+    }
+
+
 </head>
 
 <body tabindex="1" class="loadingInProgress">
-    <div style="display: inline-block; width:50%;">
+    <div class="split left">
         <div id="outerContainer">
             <div id="sidebarContainer">
                 <div id="toolbarSidebar">
@@ -337,9 +369,24 @@
         <div id="printContainer"></div>
     </div>
 
-    <div style="display: inline-block; width:50%;">
-        Table here
+    <div class="split right">
+        <div id="demo" style="margin-top: 40px;">           
+                <table id="menu" class="display">
+                    <thead>
+                        <tr>
+                            <th>Dish</th>
+                            <th>Description</th>
+                            <th>VEG_COMMENT</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody> </tbody>
+                </table>
+            
+        </div>
     </div>
+
 </body>
 </html>
 
