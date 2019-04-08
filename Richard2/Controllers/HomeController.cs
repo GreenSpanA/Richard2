@@ -167,7 +167,7 @@ namespace Richard2.Controllers
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "If you have any question...";
+            //ViewData["Message"] = "If you have any question...";
 
             return View();
         }
