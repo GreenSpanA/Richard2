@@ -7,22 +7,22 @@ namespace Richard2.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required]        
         public string Category { get; set; }
 
-        [Required]
+        [Required]        
         public string Dish { get; set; }
 
-        [Required]
+        //[Required]       
         public string Description { get; set; }
 
-        [Required]
+        //[Required]
         public string Veg_Comment { get; set; }
-
-        [Required]
+        
+        [Required]        
         public string Price { get; set; }
 
-        [Required]
+        //[Required]
         public string Size_Comment { get; set; }
 
 
