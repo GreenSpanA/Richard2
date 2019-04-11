@@ -34,63 +34,30 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dish)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Veg_Comment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size_Comment)
-            </td>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Veg_Comment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size_Comment)
+        </td>
 
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
-            </td>
-        </tr>
+        <td>
+            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
+        </td>
+    </tr>
     }
 </table>
-
-
-<!-- The below code is for the modal dialog -->
-<div id="modal-container" class="modal fade" tabindex="-1" role="dialog">
-    <a href="#close" title="Close" class="modal-close-btn">X</a>
-    <div class="modal-content">
-        <div class="modal-body"></div>
-    </div>
-</div>
-
-<script script language="javascript" type="text/javascript">
-    $(function () {
-
-        $('body').on('click', '.modal-link', function (e) {
-            e.preventDefault();
-
-            $("#modal-container").remove();
-
-            $.get($(this).data("targeturl"), function (data) {
-
-                $('<div id="modal-container" class="modal fade">' +
-                    '<div class="modal-content" id= "modalbody" >' +
-                    data + '</div></div>').modal();
-
-            });
-        });
-    });
-</script>
-
-
-
-
-

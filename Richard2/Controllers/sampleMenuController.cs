@@ -54,6 +54,7 @@ namespace Richard2.Controllers
 
         }
 
+        // POST: /Customer/Edit   
         [HttpPost]
         public IActionResult Edit(sampleMenu obj)
         {
@@ -63,8 +64,7 @@ namespace Richard2.Controllers
                 sMenuRepository.Update(obj);
                 return RedirectToAction("Index");
             }
-            //return View(obj);           
-            return PartialView(obj);
+            return View(obj);
         }
 
         // GET:/Customer/Delete/1
