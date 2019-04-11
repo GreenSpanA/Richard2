@@ -33,9 +33,9 @@ namespace Richard2.Controllers
         }
 
 
-        public IActionResult Create()
+        public IActionResult ViewCreate()
         {
-            return View();
+            return PartialView("_Create");
         }
 
         // POST: Customer/Create
@@ -50,26 +50,24 @@ namespace Richard2.Controllers
             return View(cust);
 
         }
-
-        // GET: /Customer/Edit/1
-        public IActionResult Edit(int? id)
+        
+        public IActionResult ViewEdit(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
             sampleMenu obj = sMenuRepository.FindByID(id.Value);
+
             if (obj == null)
             {
                 return NotFound();
-            }
-            return View(obj);
+            }            
+            return PartialView("_Edit", obj);
+        }   
 
-        }
-
-        // POST: /Customer/Edit   
         [HttpPost]
-        public IActionResult Edit(sampleMenu obj)
+        public IActionResult ViewEdit(sampleMenu obj)
         {
 
             if (ModelState.IsValid)
@@ -77,6 +75,7 @@ namespace Richard2.Controllers
                 sMenuRepository.Update(obj);
                 return RedirectToAction("Index");
             }
+                      
             return View(obj);
         }
 
