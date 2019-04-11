@@ -6,6 +6,10 @@
 
 <h2>Index</h2>
 
+<div class="jumbotron">
+    @Html.ActionLink("Lyubomir ", "ViewLyubomir", "sampleMenu", null, new { @class = "modal-link btn btn-success" })
+</div>
+
 <p>
     <a asp-action="Create">Create New</a>
 </p>
@@ -34,30 +38,31 @@
 
     @foreach (var item in Model)
     {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Dish)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Veg_Comment)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Size_Comment)
-        </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Veg_Comment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size_Comment)
+            </td>
 
-        <td>
-            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
-        </td>
-    </tr>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
+            </td>
+        </tr>
     }
 </table>
+

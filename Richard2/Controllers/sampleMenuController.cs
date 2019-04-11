@@ -18,7 +18,20 @@ namespace Richard2.Controllers
         public IActionResult Index()
         {
             return View(sMenuRepository.FindAll());
+        }       
+
+        public ActionResult ViewLyubomir()
+        {
+            return PartialView("_Lyubomir");
         }
+
+
+        [HttpPost]
+        public ActionResult Lyubomir()
+        {
+            return RedirectToAction("Index");
+        }
+
 
         public IActionResult Create()
         {
