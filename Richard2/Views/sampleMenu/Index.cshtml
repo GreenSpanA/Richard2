@@ -4,67 +4,76 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<head>
+    <link href="~/css/pdfView.css" rel="stylesheet" />
+</head>
 
-<div class="jumbotron">
-    @Html.ActionLink("Create", "ViewCreate", "sampleMenu", null, new { @class = "modal-link btn btn-success" })
-</div>
+<body>    
+    <div class="split left">
+        @*<iframe width="560" height="315" src="https://www.the-ivy.co.uk/media/7539/4042019-alc.pdf" frameborder="0" allowfullscreen></iframe>*@
 
-@*<p>
-    <a asp-action=>Create New</a>
-</p>*@
+    <embed src="https://www.the-ivy.co.uk/media/7539/4042019-alc.pdf"  alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+    </div>
 
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Dish)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Veg_Comment)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Size_Comment)
-        </th>
-        <th></th>
-    </tr>
+    <div class="split right">
+        <div id="demo" style="margin-top: 40px;">
+            <div class="jumbotron">
+                @Html.ActionLink("Create", "ViewCreate", "sampleMenu", null, new { @class = "modal-link btn btn-success" })
+            </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dish)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Veg_Comment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Size_Comment)
-            </td>
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Category)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Dish)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Veg_Comment)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Price)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Size_Comment)
+                    </th>
+                    <th></th>
+                </tr>
 
-            <td>
-                @*<a asp-action="ViewEdit" asp-route-id="@item.Id">Edit</a>*@
-                @Html.ActionLink("Edit", "ViewEdit/" + @item.Id, "sampleMenu", null, new { @class = "modal-link btn btn-success" })
-                <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
-            </td>
-        </tr>
-    }
-</table>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dish)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Veg_Comment)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Size_Comment)
+                        </td>
 
+                        <td>
+                            @*<a asp-action="ViewEdit" asp-route-id="@item.Id">Edit</a>*@
+                            @Html.ActionLink("Edit", "ViewEdit/" + @item.Id, "sampleMenu", null, new { @class = "modal-link btn btn-success" })
+                            <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</body>
