@@ -6,20 +6,46 @@
 
 <head>
     <link href="~/css/pdfView.css" rel="stylesheet" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="~/js/incrementing.js"></script>   
+
+    <script>
+        var id = $button.attr("id");
+        $.ajax({
+            type: "POST",
+            url: "dosomething.php?id=" + id + "&newvalue=" + newVal,
+            success: function () {
+                $button.parent().find("input").val(newVal);
+            }
+        });
+    </script>
 </head>
 
 <body>    
+
     <div class="split left">
-        @*<iframe width="560" height="315" src="https://www.the-ivy.co.uk/media/7539/4042019-alc.pdf" frameborder="0" allowfullscreen></iframe>*@
-
-    <embed src="https://www.the-ivy.co.uk/media/7539/4042019-alc.pdf"  alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+        <embed src="AdoreRemoMenuSep18.pdf" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
     </div>
-
+    
     <div class="split right">
         <div id="demo" style="margin-top: 40px;">
             <div class="jumbotron">
-                @Html.ActionLink("Create", "ViewCreate", "sampleMenu", null, new { @class = "modal-link btn btn-success" })
+                <form method="post" action="">
+                    <div>
+                        <label for="name">MENU ID: </label>
+                        <input type="text" name="french-hens" id="french-hens" value="3">
+                        <div class="inc button">+</div>
+                        <div class="dec button">-</div>
+                    </div>
+
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+
             </div>
+
+            @Html.ActionLink("Create", "ViewCreate", "sampleMenu", null, new { @class = "modal-link btn btn-success" })
 
             <table class="table">
                 <tr>
