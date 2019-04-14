@@ -14,10 +14,18 @@ namespace Richard2.Controllers
             sMenuRepository = new sampleMenuRepository(configuration);
         }
 
+
         public IActionResult Index()
         {
             return View(sMenuRepository.FindAll());
-        }       
+        }
+
+
+        //public IActionResult Index(string searchString)
+        //{
+        //    searchString = "1";
+        //    return View(sMenuRepository.FindCurrent(searchString));
+        //}
 
         public IActionResult ViewCreate()
         {

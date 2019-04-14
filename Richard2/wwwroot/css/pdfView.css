@@ -48,7 +48,14 @@ object {
     border-radius: 50%;
 }
 
+.DelButton {
+    display: inline;
+    background-color: firebrick;
+}
 
+.submitButton{
+   margin-top:10px;
+}
 /*a {
     text-decoration: none;
     display: inline-block;
@@ -64,29 +71,22 @@ a:hover {
     background-color: #f1f1f1;
     color: black;
 }*/
-
-
 /*body {
     color: white;
     font: 14px Helvetica, sans-serif;
     background: hsla(60, 59%, 65%, 0.1);
 }*/
-    
-
 /*#page-wrap {
     width: 500px;
     margin: 100px auto;
 }*/
-
 /*h1 {
     font: 26px Georgia, Serif;
     margin: 0 0 10px 0;
 }*/
-
 /*form {
     margin: 50px 0 0 0;
 }*/
-
 /*label {
     font: bold 20px Helvetica, sans-serif;
     display: block;
@@ -95,7 +95,6 @@ a:hover {
     padding: 5px 10px 0 0;
     width: 140px;
 }*/
-
 /*input[type=text] {
     float: left;
     width: 40px;
@@ -103,12 +102,10 @@ a:hover {
     padding: 3px 0 0 0;
     text-align: center;
 }*/
-
 /*form div {
     overflow: hidden;
     margin: 0 0 5px 0;
 }*/
-
 .button {
     margin: 0 0 0 5px;
     text-indent: -9999px;
@@ -117,7 +114,7 @@ a:hover {
     height: 29px;
     float: left;
     text-align: center;
-    background: url('images/buttons.png') no-repeat;    
+    background: url('images/buttons.png') no-repeat;
 }
 
 .dec {

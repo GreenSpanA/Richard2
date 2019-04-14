@@ -23,11 +23,8 @@
 
     <script>
      $(document).ready(function () {
-
         $('#MyForm').submit(function (e) {
-
             var formData = new FormData(this);
-
             $.ajax({
                 url: '@Url.Action("InfoMenu", "sampleMenu")',
                 type: "POST",
@@ -37,10 +34,9 @@
                 contentType: false,
                 processData: false,
                 success: function (result) {
-                 // here in result you will get your data                   
+                 // here in result you will get your data
                 },
                 error: function (result) {
-
                 }
             });
             e.preventDefault();
@@ -54,23 +50,23 @@
 
 
     <div class="split left">
-        <object id="pdf_view" data="" type="application/pdf"></object>        
+        <object id="pdf_view" data="" type="application/pdf"></object>
     </div>
 
     <div class="split right">
 
         <div id="demo" style="margin-top: 40px;">
-            <div class="jumbotron">
+            <div class="jumbotron" style="color: black">
                 @* was post *@
                 <form asp-controller="sampleMenu" asp-action="InfoMenu" method="post" id="MyForm">
                     <div>
                         <label for="name">MENU ID: </label>
-                        <input type="text" name="menu_id" id="french-hens" value="0">                       
+                        <input type="text" name="menu_id" id="french-hens" value="0">
                         <div class="inc button">+</div>
                         <div class="dec button">-</div>
-                    </div>                    
+                    </div>
 
-                    <input type="submit" value="Submit" id="submitButton">
+                    <input type="submit" value="Submit" id="submitButton" style="margin-top: 10px; margin-left: -60px;">
                 </form>
 
 
@@ -127,7 +123,9 @@
                         <td>
                             @*<a asp-action="ViewEdit" asp-route-id="@item.Id">Edit</a>*@
                             @Html.ActionLink("Edit", "ViewEdit/" + @item.Id, "sampleMenu", null, new { @class = "modal-link btn btn-success" })
+                            <div class="btn btn-warning">
                             <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are sure wants to delete?');">Delete</a>
+                            </div>
                         </td>
                     </tr>
                 }
@@ -137,4 +135,3 @@
 </body>
 
 <script src="~/js/incrementing.js"></script>
-

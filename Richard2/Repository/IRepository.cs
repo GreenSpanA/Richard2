@@ -10,5 +10,9 @@ namespace Richard2.Repository
         void Update(T item);
         T FindByID(int id);
         IEnumerable<T> FindAll();
+
+        //TODO
+        IEnumerable<T> FindCurrent(string size_comment);
+
     }
 }

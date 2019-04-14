@@ -46,6 +46,17 @@ namespace Richard2.Repository
             }
         }
 
+        //TODO
+        public IEnumerable<sampleMenu> FindCurrent(string size_comment)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                return dbConnection.Query<sampleMenu>("SELECT FROM samplemenu WHERE size_comment=@Size_comment", new {Size_comment = size_comment});
+            }
+        }
+
+
         public sampleMenu FindByID(int id)
         {
             using (IDbConnection dbConnection = Connection)
