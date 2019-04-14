@@ -69,8 +69,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\ABBEY - DRINKS MENU - JULY 2017.pdf" />
-    <None Include="wwwroot\AdoreRemoMenuSep18.pdf" />
+    <None Include="wwwroot\2.pdf" />
+    <None Include="wwwroot\1.pdf" />
     <None Include="wwwroot\Content\dataTables\demo_page.css" />
     <None Include="wwwroot\Content\dataTables\demo_table.css" />
     <None Include="wwwroot\Content\dataTables\demo_table_jui.css" />

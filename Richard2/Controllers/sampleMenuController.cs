@@ -14,24 +14,10 @@ namespace Richard2.Controllers
             sMenuRepository = new sampleMenuRepository(configuration);
         }
 
-
         public IActionResult Index()
         {
             return View(sMenuRepository.FindAll());
         }       
-
-        public ActionResult ViewLyubomir()
-        {
-            return PartialView("_Lyubomir");
-        }
-
-
-        [HttpPost]
-        public ActionResult Lyubomir()
-        {
-            return RedirectToAction("Index");
-        }
-
 
         public IActionResult ViewCreate()
         {
@@ -90,5 +76,19 @@ namespace Richard2.Controllers
             sMenuRepository.Remove(id.Value);
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public IActionResult InfoMenu()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult InfoMenu(string menu_id)
+        {
+            string info = $"Info: {menu_id}";
+            return Content(info);
+        }
+
     }
 }

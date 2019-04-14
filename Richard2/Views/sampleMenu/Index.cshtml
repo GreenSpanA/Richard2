@@ -8,40 +8,72 @@
     <link href="~/css/pdfView.css" rel="stylesheet" />
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    
-    <script src="~/js/incrementing.js"></script>   
+
+
+    @*<script>
+            var id = $button.attr("id");
+            $.ajax({
+                type: "POST",
+                url: "dosomething.php?id=" + id + "&newvalue=" + newVal,
+                success: function () {
+                    $button.parent().find("input").val(newVal);
+                }
+            });
+        </script>*@
 
     <script>
-        var id = $button.attr("id");
-        $.ajax({
-            type: "POST",
-            url: "dosomething.php?id=" + id + "&newvalue=" + newVal,
-            success: function () {
-                $button.parent().find("input").val(newVal);
-            }
+     $(document).ready(function () {
+
+        $('#MyForm').submit(function (e) {
+
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '@Url.Action("InfoMenu", "sampleMenu")',
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json; charset=utf-8",
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function (result) {
+                 // here in result you will get your data                   
+                },
+                error: function (result) {
+
+                }
+            });
+            e.preventDefault();
         });
+    });
     </script>
+
 </head>
 
-<body>    
+<body>
+
 
     <div class="split left">
-        <embed src="AdoreRemoMenuSep18.pdf" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+        <object id="pdf_view" data="" type="application/pdf"></object>        
     </div>
-    
+
     <div class="split right">
+
         <div id="demo" style="margin-top: 40px;">
             <div class="jumbotron">
-                <form method="post" action="">
+                @* was post *@
+                <form asp-controller="sampleMenu" asp-action="InfoMenu" method="post" id="MyForm">
                     <div>
                         <label for="name">MENU ID: </label>
-                        <input type="text" name="french-hens" id="french-hens" value="3">
+                        <input type="text" name="menu_id" id="french-hens" value="0">                       
                         <div class="inc button">+</div>
                         <div class="dec button">-</div>
-                    </div>
+                    </div>                    
 
-                    <input type="submit" value="Submit" id="submit">
+                    <input type="submit" value="Submit" id="submitButton">
                 </form>
+
+
 
             </div>
 
@@ -103,3 +135,6 @@
         </div>
     </div>
 </body>
+
+<script src="~/js/incrementing.js"></script>
+

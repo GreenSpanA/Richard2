@@ -8,18 +8,18 @@ $(function() {
     var oldValue = $button.parent().find("input").val();
 
     if ($button.text() == "+") {
-  	  var newVal = parseFloat(oldValue) + 1;
+        var newVal = parseFloat(oldValue) + 1;        
+        document.getElementById('pdf_view').data = newVal.toString() + ".pdf"
   	} else {
 	   // Don't allow decrementing below zero
       if (oldValue > 0) {
-        var newVal = parseFloat(oldValue) - 1;
+          var newVal = parseFloat(oldValue) - 1;    
+          document.getElementById('pdf_view').data = newVal.toString() + ".pdf"
 	    } else {
-        newVal = 0;
+          newVal = 0;          
       }
-	  }
-
-    $button.parent().find("input").val(newVal);
-
+	  }   
+    $button.parent().find("input").val(newVal);   
   });
 
 });
