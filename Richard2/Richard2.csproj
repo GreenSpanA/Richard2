@@ -64,6 +64,7 @@
 
   <ItemGroup>
     <Folder Include="Models\PDF\" />
+    <Folder Include="Models\ViewModels\" />
     <Folder Include="Scripts\" />
     <Folder Include="wwwroot\PDF\" />
   </ItemGroup>

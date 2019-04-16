@@ -9,10 +9,18 @@ namespace Richard2.Controllers
     {
         private readonly sampleMenuRepository sMenuRepository;
 
+        //new
+        private readonly currentFileRepository sFileRepository;     
+
+
         public sampleMenuController(IConfiguration configuration)
         {
             sMenuRepository = new sampleMenuRepository(configuration);
+            //new
+            sFileRepository = new currentFileRepository(configuration);
         }
+
+
 
 
         public IActionResult Index()
@@ -20,13 +28,7 @@ namespace Richard2.Controllers
             return View(sMenuRepository.FindAll());
         }
 
-
-        //public IActionResult Index(string searchString)
-        //{
-        //    searchString = "1";
-        //    return View(sMenuRepository.FindCurrent(searchString));
-        //}
-
+       
         public IActionResult ViewCreate()
         {
             return PartialView("_Create");
@@ -85,10 +87,24 @@ namespace Richard2.Controllers
             return RedirectToAction("Index");
         }
 
+        //[HttpGet]
+        //public IActionResult InfoMenu()
+        //{
+        //    return View();
+        //}
+
         [HttpGet]
-        public IActionResult InfoMenu()
+        public IActionResult InfoMenu(int? id)
         {
-            return View();
+            id = 0;
+            sampleMenu obj = sMenuRepository.FindByFile(id.Value);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }           
+
+            return Json(new { data = obj });
         }
 
         [HttpPost]
@@ -97,6 +113,18 @@ namespace Richard2.Controllers
             string info = $"Info: {menu_id}";
             return Content(info);
         }
+
+        //[HttpPost]
+        //public ActionResult Subscribe(currentFile model_f)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        currentFile obj = sFileRepository.FindByID(1);
+        //        sFileRepository.Update(obj);
+        //    }
+
+        //    return View("Index", model_f);
+        //}
 
     }
 }

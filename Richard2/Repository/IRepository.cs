@@ -11,6 +11,8 @@ namespace Richard2.Repository
         T FindByID(int id);
         IEnumerable<T> FindAll();
 
+        T FindByFile(int id);
+
         //TODO
         IEnumerable<T> FindCurrent(string size_comment);
 

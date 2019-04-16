@@ -23,7 +23,7 @@ namespace Richard2.Models
         public string Price { get; set; }
 
         //[Required]
-        public string Size_Comment { get; set; }
+        public string File_Name { get; set; }
 
 
     }

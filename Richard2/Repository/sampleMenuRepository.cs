@@ -32,8 +32,8 @@ namespace Richard2.Repository
             {
                 dbConnection.Open();
                 dbConnection.Execute("INSERT INTO samplemenu (category, dish, description," +
-                    "veg_comment, price, size_comment) VALUES(@Category, @Dish, @Description, " +
-                    "@Veg_Comment, @Price, @Size_Comment)", item);
+                    "veg_comment, price, file_name) VALUES(@Category, @Dish, @Description, " +
+                    "@Veg_Comment, @Price, @File_Name)", item);
             }
         }
 
@@ -42,17 +42,17 @@ namespace Richard2.Repository
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
-                return dbConnection.Query<sampleMenu>("SELECT * FROM samplemenu");
+                return dbConnection.Query<sampleMenu>("SELECT * FROM samplemenu WHERE id > 0");
             }
         }
 
         //TODO
-        public IEnumerable<sampleMenu> FindCurrent(string size_comment)
+        public IEnumerable<sampleMenu> FindCurrent(string file_name)
         {
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
-                return dbConnection.Query<sampleMenu>("SELECT FROM samplemenu WHERE size_comment=@Size_comment", new {Size_comment = size_comment});
+                return dbConnection.Query<sampleMenu>("SELECT FROM samplemenu WHERE file_name=@File_Name", new { File_Name = file_name });
             }
         }
 
@@ -65,6 +65,17 @@ namespace Richard2.Repository
                 return dbConnection.Query<sampleMenu>("SELECT * FROM samplemenu WHERE id = @Id", new { Id = id }).FirstOrDefault();
             }
         }
+
+        public sampleMenu FindByFile(int id)
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                return dbConnection.Query<sampleMenu>("SELECT file_name FROM samplemenu WHERE id = @Id", new { Id = 0 }).FirstOrDefault();
+            }
+        }
+
+
 
         public void Remove(int id)
         {
@@ -81,9 +92,9 @@ namespace Richard2.Repository
             {
                 dbConnection.Open();
                 dbConnection.Query("UPDATE samplemenu SET category = @Category,  dish  = @Dish, description = @Description, " +
-                    "veg_comment = @Veg_Comment, price = @Price, size_comment = @Size_Comment WHERE id = @Id", item);
+                    "veg_comment = @Veg_Comment, price = @Price, file_name = @File_Name WHERE id = @Id", item);
             }
-        }
+        }        
         
     }
 }
